@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,700");
+
+:root {
+    --couleur-principale: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--couleur-principale);
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #36393F;
+}
+
+audio::-webkit-media-controls {
+    display: none !important;
+}
+
+.header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-color: #1d1f25;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid var(--couleur-principale);
+    justify-content: space-between;
+    height: 110px;
+    transition: height 0.7s ease-in-out;
+}
+.header h1 {
+    font-size: 50px;
+    margin-left: 40px;
+    color: var(--couleur-principale)
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+li {
+    margin: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+}
+.active {
+    border-bottom: 3px solid var(--couleur-principale); /** always put a bar at the bottom of the activated "a" */
+}
+.navigation a:hover, .acti:hover {
+    border-bottom: 3px solid var(--couleur-principale); /** bar at the bottom of "a" when cursor is in it */
+    transition: border-bottom 0.6s all;
+}
+
+.hamburger, .nav-burger {
+    display: none; 
+}
+
+.enabled span:nth-child(1) {
+    transform: rotate(45deg) translate(7.5px, 9px);
+    transition: transform 0.5s;
+}
+
+.enabled span:nth-child(2) {
+    opacity: 0;
+}
+
+.enabled span:nth-child(3) {
+    transform: rotate(-45deg) translate(7.5px, -9px); 
+    transition: transform 0.5s;
+}
+
+.disabled span:nth-child(1) {
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+}
+
+.disabled span:nth-child(2) {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: transform 0.5s;
+}
+
+.disabled span:nth-child(3) {
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+}
+
+.activated::before {
+    height: 200px; /** increase the height */
+}
+
+.welcome {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+}
+
+.bot-welcome {
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 30px;
+    height: 360px;
+    width: 90%;
+    text-align: center;
+}
+
+.bot-welcome img {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+}
+
+.bot-welcome h1 {
+    font-size: 30px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.bot-welcome a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--couleur-principale);
+    color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    position: relative;
+    top: 30px;
+    border-radius: 5px;
+    height: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.bot-welcome a:hover {
+    background-color: #000000;
+    color: var(--couleur-principale)
+}
+
+.news {
+    height: 500px;
+    background-color: #1d1f25;
+}
+
+
+.functionalities {
+    height: 500px;
+    background-color: #1d1f25;
+}
+
+.wave-svg-b {
+    background-color: #1d1f25;
+    border-top: 8px solid #36393F;
+}
+
+
+.invite {
+    height: 300px;
+    background-image: url(https://cdn.discordapp.com/attachments/1088512884415414282/1230597103344943174/background.png?ex=6633e5dc&is=662170dc&hm=971bfe444eb1bcb7100286a19211e638ca55a00db99c562169cf4565ec90c84a&);
+    background-repeat: repeat;
+    background-size: 80%;
+    background-position: 0%;
+}
+
+.bot-invite {
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 30px;
+    background-color: #000000;
+    opacity: 70%;
+    height: 240px;
+    width: 90%;
+    text-align: center;
+}
+
+.bot-invite h1:first-child {
+    position: relative;
+    margin-top: 40px
+}
+
+.bot-invite h1 {
+    font-size: 30px;
+}
+
+.bot-invite a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--couleur-principale);
+    color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    position: relative;
+    top: 30px;
+    border-radius: 5px;
+    height: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.bot-invite a:hover {
+    background-color: #000000;
+    color: var(--couleur-principale)
+}
+
+.top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1d1f25;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.top .fas {
+    color: var(--couleur-principale);
+    transition: color 0.3s ease;
+}
+
+.top:hover {
+    background-color: var(--couleur-principale);
+}
+
+.top:hover .fas {
+    color: #1d1f25
+}
+
+.mute {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #1d1f25;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mute .fas {
+    color: var(--couleur-principale);
+    transition: color 0.3s ease;
+}
+
+.mute:hover {
+    background-color: var(--couleur-principale);
+}
+
+.mute:hover .fas {
+    color: #1d1f25
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    background-color: #1d1f25;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-top: 5px solid var(--couleur-principale);
+}
+
+.icons {
+    position: relative;
+    top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.icons i {
+    margin: 0 10px;
+}
+
+.icons i:hover {
+    color: #000000;
+    border-radius: 50%;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.copy {
+    color: var(--couleur-principale);
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    top: -10px;
+}
+
+@media only screen and (max-width: 900px) {
+    .navigation {
+        display: none;
+    }
+
+    .hamburger {
+        position: relative;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 100px;
+        margin-bottom: 35px
+    }
+
+    .hamburger span {
+        position: absolute;
+        display: flex;
+        margin: 5px auto;
+        width: 50px;
+        height: 5px;
+        background-color: var(--couleur-principale);
+        transition: all 0.3s ease;
+    }
+      
+    .hamburger span:nth-child(1) {
+        top: 0;
+        left: 0;
+    }
+      
+    .hamburger span:nth-child(2) {
+        top: 12px;
+        left: 0;
+    }
+      
+    .hamburger span:nth-child(3) {
+        top: 24px;
+        left: 0;
+    }
+
+    .header .hamburger:hover span, .header .hamburger:focus span {
+        background-color: #000000;
+    }
+    .bot-invite {
+        height: 300px;
+    }
+
+    .invite {
+        height: 360px;
+    }
+}
